@@ -17,6 +17,19 @@
             <div class="card" style="border-radius: 15px;">
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Login</h2>
+                
+                <!-- Flash messages inside the form -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    {% for category, message in messages %}
+                      <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+                
                 <form method="POST" action="{{ url_for('login') }}">
                   <div class="form-outline mb-4">
                     <input type="email" id="email" name="email" class="form-control form-control-lg" required />
@@ -39,5 +52,15 @@
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+  <script>
+    // Initialize Bootstrap's alert dismissal functionality
+    document.querySelectorAll('.alert .btn-close').forEach(function(button) {
+      button.addEventListener('click', function() {
+        var alert = button.closest('.alert');
+        alert.classList.remove('show');
+        alert.classList.add('fade');
+      });
+    });
+  </script>
 </body>
 </html>

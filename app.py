@@ -81,19 +81,25 @@ def login():
 
         db_session = get_session()
 
-        # Check user credentials
+        # Check if user exists
         user = db_session.query(User).filter_by(email=email).first()
+
+        if user:
+            # If user exists, check password
+            if check_password_hash(user.password_hash, password):
+                flask_session['user_id'] = user.id  # Using Flask session
+                flask_session['user_name'] = user.name  # Using Flask session
+                flash(f'Welcome, {user.name}!', 'success')
+                return redirect(url_for('home'))
+            else:
+                flash('Invalid password. Please try again.', 'danger')
+        else:
+            flash('User does not exist. Please check your email or sign up.', 'danger')
+
         db_session.close()
 
-        if user and check_password_hash(user.password_hash, password):
-            flask_session['user_id'] = user.id  # Using Flask session
-            flask_session['user_name'] = user.name  # Using Flask session
-            flash(f'Welcome, {user.name}!', 'success')
-            return redirect(url_for('home'))
-        else:
-            flash('Invalid email or password. Please try again.', 'danger')
-
     return render_template('login.html')
+
 
 
 # Route for home page
