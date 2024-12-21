@@ -113,51 +113,34 @@ def logout():
     return redirect(url_for('login'))
 
 
+# Route for public administration form
 @app.route('/public-form', methods=['GET', 'POST'])
 def public_form():
     if request.method == 'POST':
+        # Collect data from the form
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
         address = request.form['address']
 
-        # Create a new FormData instance
-        new_form_data = FormData(name=name, email=email, message=message, address=address)
+        # Create a new FormData object
+        new_form_entry = FormData(
+            name=name,
+            email=email,
+            message=message,
+            address=address
+        )
 
-        # Add to session and commit
-        with get_session() as db_session:
-            db_session.add(new_form_data)
-            db_session.commit()
+        # Get a database session and save the data
+        db_session = get_session()
+        db_session.add(new_form_entry)  # Add the new entry to the session
+        db_session.commit()  # Commit the transaction to the database
+        db_session.close()  # Close the session
 
-            # Now query the form data directly after commit, within the same session
-            form_data = db_session.query(FormData).filter_by(id=new_form_data.id).first()
-
-        # Redirect to confirmation page with the form data
-        return redirect(url_for('form_confirmation', form_id=form_data.id))
+        flash('Form submitted successfully!', 'success')  # Show a success message
+        return redirect(url_for('public_form'))  # Redirect to the form page again (or anywhere else)
 
     return render_template('public_admin_form.html')
-
-
-
-
-@app.route('/form-confirmation/<int:form_id>')
-def form_confirmation(form_id):
-    # Create a new session to fetch the form data from the database
-    with get_session() as db_session:  # Using session context to ensure it's active
-        # Query the database to get the FormData by form_id
-        form_data = db_session.query(FormData).filter_by(id=form_id).first()
-
-    # Check if form_data exists
-    if form_data:
-        # Pass the form data to the template for display
-        return render_template('form_confirmation.html', form_data=form_data)
-    else:
-        flash('Form submission not found.', 'danger')
-        return redirect(url_for('public_form'))
-
-
-
-
 
 
 if __name__ == "__main__":
