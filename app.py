@@ -89,7 +89,7 @@ def login():
             if check_password_hash(user.password_hash, password):
                 flask_session['user_id'] = user.id  # Using Flask session
                 flask_session['user_name'] = user.name  # Using Flask session
-                flash(f'Welcome, {user.name}!', 'success')
+                #flash(f'Welcome, {user.name}!', 'success')
                 return redirect(url_for('home'))
             else:
                 flash('Invalid password. Please try again.', 'danger')
