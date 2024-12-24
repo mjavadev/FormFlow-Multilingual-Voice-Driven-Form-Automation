@@ -5,8 +5,12 @@ from sqlalchemy import Column, Integer, String, DateTime, Text
 from sqlalchemy.orm import declarative_base
 from datetime import datetime
 
+from flask import Response
+import json
+
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
+app.config['JSON_AS_ASCII'] = False
 
 # Define the base class for SQLAlchemy
 Base = declarative_base()
@@ -127,6 +131,12 @@ def public_form():
         message = request.form['message']
         address = request.form['address']
 
+        # Explicitly ensure the data is processed as UTF-8
+        name = name.encode('utf-8').decode('utf-8')
+        email = email.encode('utf-8').decode('utf-8')
+        message = message.encode('utf-8').decode('utf-8')
+        address = address.encode('utf-8').decode('utf-8')
+
         # Create a new FormData instance
         new_form_data = FormData(name=name, email=email, message=message, address=address)
 
@@ -160,8 +170,6 @@ def form_confirmation(form_id):
     else:
         flash('Form submission not found.', 'danger')
         return redirect(url_for('public_form'))
-
-
 
 
 
