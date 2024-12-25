@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Administration Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <style>
+    /* Styles for input fields with moving placeholders */
+    .form-outline {
+      position: relative;
+    }
+
+    .form-label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      color: #495057;
+    }
+
+    .form-control:focus + .form-label,
+    .form-control:not(:placeholder-shown) + .form-label {
+      top: -10px;
+      left: 10px;
+      font-size: 0.75rem;
+      color: #007bff;
+    }
+
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Fix the section to make space for footer */
+    .section-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh; /* Set minimum height for form container */
+      padding: 20px;
+      background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');
+      background-size: cover;
+    }
+
+    .card-body {
+      margin-bottom: 30px;
+    }
+
+    /* Footer styling */
+    footer {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  {% include 'nav.html' %}
+  <section class="section-wrapper">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Public Administration Form</h2>
+              <form method="POST" action="{{ url_for('public_form') }}">
+                <!-- Full Name -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="formName" name="name" class="form-control form-control-lg voice-input" placeholder="Enter full name" required />
+                  <label class="form-label" for="formName">Full Name</label>
+                </div>
+
+                <!-- Email -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="formEmail" name="email" class="form-control form-control-lg voice-input" placeholder="Enter email" required />
+                  <label class="form-label" for="formEmail">Email</label>
+                </div>
+
+                <!-- Message -->
+                <div class="form-outline mb-4">
+                  <textarea id="formMessage" name="message" class="form-control form-control-lg voice-input" placeholder="Enter message" rows="4" required></textarea>
+                  <label class="form-label" for="formMessage">Message</label>
+                </div>
+
+                <!-- Address -->
+                <div class="form-outline mb-4">
+                  <textarea id="formAddress" name="address" class="form-control form-control-lg voice-input" placeholder="Enter address" rows="2" required></textarea>
+                  <label class="form-label" for="formAddress">Address</label>
+                </div>
+
+                <!-- Language Dropdown -->
+                <div class="form-outline mb-4">
+                  <label for="languageSelect">Select Language</label>
+                  <select id="languageSelect" class="form-control form-control-lg">
+                    <!-- All Languages -->
+                    <option value="en-IN">English (India)</option>
+                    <option value="en-US">English (US)</option>
+                    <option value="en-GB">English (UK)</option>
+                    <option value="en-AU">English (Australia)</option>
+                    <option value="en-CA">English (Canada)</option>
+                    <option value="en-NZ">English (New Zealand)</option>
+
+                    <!-- Indian Languages -->
+                    <optgroup label="Indian Languages">
+                      <option value="hi-IN">Hindi (India)</option>
+                      <option value="bn-IN">Bengali (India)</option>
+                      <option value="ta-IN">Tamil (India)</option>
+                      <option value="te-IN">Telugu (India)</option>
+                      <option value="ml-IN">Malayalam (India)</option>
+                      <option value="gu-IN">Gujarati (India)</option>
+                      <option value="kn-IN">Kannada (India)</option>
+                      <option value="mr-IN">Marathi (India)</option>
+                      <option value="pa-IN">Punjabi (India)</option>
+                      <option value="or-IN">Odia (India)</option>
+                      <option value="as-IN">Assamese (India)</option>
+                      <option value="ma-IN">Maithili (India)</option>
+                      <option value="ur-IN">Urdu (India)</option>
+                      <option value="hi-IN">Hindi (India)</option>
+                      <option value="ne-IN">Nepali (India)</option>
+                    </optgroup>
+
+                    <!-- Spanish Languages -->
+                    <optgroup label="Spanish Languages">
+                      <option value="es-ES">Spanish (Spain)</option>
+                      <option value="es-MX">Spanish (Mexico)</option>
+                      <option value="es-CO">Spanish (Colombia)</option>
+                      <option value="es-AR">Spanish (Argentina)</option>
+                      <option value="es-CL">Spanish (Chile)</option>
+                    </optgroup>
+
+                    <!-- French Languages -->
+                    <optgroup label="French Languages">
+                      <option value="fr-FR">French (France)</option>
+                      <option value="fr-CA">French (Canada)</option>
+                      <option value="fr-BE">French (Belgium)</option>
+                    </optgroup>
+
+                    <!-- Portuguese Languages -->
+                    <optgroup label="Portuguese Languages">
+                      <option value="pt-PT">Portuguese (Portugal)</option>
+                      <option value="pt-BR">Portuguese (Brazil)</option>
+                    </optgroup>
+
+                    <!-- Arabic Languages -->
+                    <optgroup label="Arabic Languages">
+                      <option value="ar-SA">Arabic (Saudi Arabia)</option>
+                      <option value="ar-EG">Arabic (Egypt)</option>
+                      <option value="ar-AE">Arabic (UAE)</option>
+                      <option value="ar-IL">Arabic (Israel)</option>
+                    </optgroup>
+
+                    <!-- German Languages -->
+                    <optgroup label="German Languages">
+                      <option value="de-DE">German (Germany)</option>
+                      <option value="de-CH">German (Switzerland)</option>
+                      <option value="de-AT">German (Austria)</option>
+                    </optgroup>
+
+                    <!-- Italian Languages -->
+                    <optgroup label="Italian Languages">
+                      <option value="it-IT">Italian (Italy)</option>
+                    </optgroup>
+
+                    <!-- Japanese -->
+                    <optgroup label="Japanese">
+                      <option value="ja-JP">Japanese (Japan)</option>
+                    </optgroup>
+
+                    <!-- Korean -->
+                    <optgroup label="Korean">
+                      <option value="ko-KR">Korean (South Korea)</option>
+                    </optgroup>
+
+                    <!-- Chinese Languages -->
+                    <optgroup label="Chinese Languages">
+                      <option value="zh-CN">Chinese (Simplified)</option>
+                      <option value="zh-TW">Chinese (Traditional)</option>
+                      <option value="zh-HK">Chinese (Hong Kong)</option>
+                      <option value="zh-SG">Chinese (Singapore)</option>
+                    </optgroup>
+
+                    <!-- Russian -->
+                    <optgroup label="Russian">
+                      <option value="ru-RU">Russian (Russia)</option>
+                    </optgroup>
+
+                    <!-- Southeast Asian Languages -->
+                    <optgroup label="Southeast Asian Languages">
+                      <option value="vi-VN">Vietnamese (Vietnam)</option>
+                      <option value="th-TH">Thai (Thailand)</option>
+                      <option value="id-ID">Indonesian (Indonesia)</option>
+                      <option value="ms-MY">Malay (Malaysia)</option>
+                    </optgroup>
+
+                    <!-- European Languages -->
+                    <optgroup label="European Languages">
+                      <option value="pl-PL">Polish (Poland)</option>
+                      <option value="fi-FI">Finnish (Finland)</option>
+                      <option value="da-DK">Danish (Denmark)</option>
+                      <option value="sv-SE">Swedish (Sweden)</option>
+                      <option value="no-NO">Norwegian (Norway)</option>
+                      <option value="cs-CZ">Czech (Czech Republic)</option>
+                      <option value="sk-SK">Slovak (Slovakia)</option>
+                      <option value="ro-RO">Romanian (Romania)</option>
+                      <option value="hu-HU">Hungarian (Hungary)</option>
+                      <option value="el-GR">Greek (Greece)</option>
+                      <option value="nl-NL">Dutch (Netherlands)</option>
+                      <option value="is-IS">Icelandic (Iceland)</option>
+                      <option value="hr-HR">Croatian (Croatia)</option>
+                      <option value="bs-BA">Bosnian (Bosnia and Herzegovina)</option>
+                      <option value="sq-AL">Albanian (Albania)</option>
+                      <option value="sr-RS">Serbian (Serbia)</option>
+                      <option value="sl-SI">Slovenian (Slovenia)</option>
+                      <option value="mk-MK">Macedonian (North Macedonia)</option>
+                      <option value="lt-LT">Lithuanian (Lithuania)</option>
+                      <option value="lv-LV">Latvian (Latvia)</option>
+                    </optgroup>
+
+                    <!-- Other Asian Languages -->
+                    <optgroup label="Other Asian Languages">
+                      <option value="am-ET">Amharic (Ethiopia)</option>
+                      <option value="km-KH">Khmer (Cambodia)</option>
+                      <option value="lo-LA">Lao (Laos)</option>
+                      <option value="my-MM">Myanmar (Burma)</option>
+                      <option value="si-LK">Sinhalese (Sri Lanka)</option>
+                      <option value="pa-IN">Punjabi (India)</option>
+                    </optgroup>
+
+                    <!-- African Languages -->
+                    <optgroup label="African Languages">
+                      <option value="af-ZA">Afrikaans (South Africa)</option>
+                      <option value="zu-ZA">Zulu (South Africa)</option>
+                    </optgroup>
+
+                    <!-- Welsh -->
+                    <optgroup label="Welsh">
+                      <option value="cy-GB">Welsh (UK)</option>
+                    </optgroup>
+                  </select>
+
+                </div>
+
+                <!-- Voice Input Section -->
+                <div class="d-flex justify-content-center mb-4">
+                  <button type="button" class="btn btn-primary btn-block btn-lg" id="start-record-btn">
+                    Start Voice Input
+                  </button>
+                  <input type="hidden" id="voiceInput" />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+  <script>
+    let isRecording = false;
+    let activeField = null;
+
+    const startRecordBtn = document.getElementById("start-record-btn");
+    const voiceInputField = document.getElementById("voiceInput");
+    const voiceInputFields = document.querySelectorAll(".voice-input");
+
+    // Get the language selection element
+    const languageSelect = document.getElementById("languageSelect");
+
+    // Setup Speech Recognition
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert('Speech Recognition API not supported in this browser.');
+      startRecordBtn.disabled = true;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    // Set the initial language to the browser's language
+    const userLanguage = navigator.language || navigator.userLanguage;
+    recognition.lang = userLanguage;
+    
+    // Listen for changes in language selection
+    languageSelect.addEventListener("change", function() {
+      recognition.lang = languageSelect.value;
+    });
+
+    // Handle button click to start/stop recording
+    startRecordBtn.addEventListener('click', function() {
+      if (isRecording) {
+        recognition.stop();
+        startRecordBtn.textContent = "Start Voice Input";
+        isRecording = false;
+      } else {
+        recognition.start();
+        startRecordBtn.textContent = "Recording... Please speak";
+        isRecording = true;
+      }
+    });
+
+    // Event listener for when recognition starts
+    recognition.onstart = function() {
+      console.log("Voice recognition started...");
+    };
+
+    // Event listener for when voice input is received
+    recognition.onresult = function(event) {
+      let transcript = event.results[0][0].transcript;
+
+      // If the active field is the email input, handle it
+      if (activeField && activeField.id === "formEmail") {
+        // Replace "at the rate" with "@", remove spaces, and make it lowercase
+        transcript = transcript
+          .replace(/\bat the rate\b/g, '@')   // "at the rate" → "@"
+          .replace(/\s+/g, '')               // Remove all spaces
+          .toLowerCase();                    // Make the email lowercase
+        activeField.value = transcript;
+      } else {
+        // Append to the field if there is already text
+        if (activeField && activeField.value) {
+          activeField.value += " " + transcript;
+        } else {
+          activeField.value = transcript;
+        }
+      }
+
+      // Reset button text and state after input
+      startRecordBtn.textContent = "Start Voice Input";
+      isRecording = false;
+    };
+
+    // Error handling
+    recognition.onerror = function(event) {
+      console.error("Error occurred in speech recognition: " + event.error);
+      startRecordBtn.textContent = "Try Again";
+      isRecording = false;
+    };
+
+    // Highlight the active field when clicked
+    voiceInputFields.forEach(field => {
+      field.addEventListener('focus', () => {
+        activeField = field;
+      });
+    });
+  </script>
+
+  {% include 'footer3.html' %}
+</body>
+</html>
