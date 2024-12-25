@@ -86,7 +86,7 @@ This repository also contains additional assignments and documentation related t
 3. **Agile Document**: Documentation of the Agile methodology followed during the project development.  
    [View Agile Document](assignments/Agile_Template_v0.1(MOHAMMED_JAVAD_A_A).xls)
 
-4. **Google Colab Notebook**: A link to the Google Colab notebook used for experiments or data-related tasks.  
+4. **Google Colab Notebook**: A dedicated notebook to track, solve, and document solutions for the 1 Week Preparation Kit questions from HackerRank.  
    [View Google Colab](https://colab.research.google.com/drive/1Z-u_jp7I8TsPYqwkfRlI2zsnR6JxVbWz?usp=sharing)
 
 5. **Certifications**: Copies of certifications relevant to the project or technologies used:  
