@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Jovian Careers</title>
+  {% include 'bootstrap.html' %}
+</head>
+
+<body>
+  {% include 'nav.html' %}
+  {% include 'banner.html' %}
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+
+    <div class="row" style="margin-bottom:16px;">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/work.jpg" style="height:320px;border-radius:4px;">
+      </div>
+    </div>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+
+    {% for job in jobs %}
+    {% include 'jobitem.html' %}
+    {% endfor %}
+
+    <div class="text-center">
+      <a href="mailto:sundar@google.com?subject=Questions%20about%20job%20openings&body=My%20Name%20%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3Cyour%20question%20here%3E"
+        class="btn btn-primary btn-lg">Contact Us</a>
+
+    </div>
+  </div>
+  {% include 'footer.html' %}
+</body>
+
+</html>
