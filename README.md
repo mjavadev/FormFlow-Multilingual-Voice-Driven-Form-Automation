@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-FormFlow is an innovative web application that transforms the traditional form-filling process into a seamless, voice-driven experience. It supports over 80 languages, offering users a fast and efficient way to fill out forms with their voice. Whether you're filling out a contact form or a government application, FormFlow makes form entry accessible, fast, and multilingual.
+FormFlow is an innovative web application that transforms the traditional form-filling process into a seamless, voice-driven experience. It supports **80+ languages**, offering users a fast and efficient way to fill out forms with their voice. Whether you're filling out a contact form or a government application, FormFlow makes form entry accessible, fast, and multilingual.
 
 ## **Problem Statement**
 
@@ -14,7 +14,7 @@ Filling out forms can be a tedious and time-consuming task. Often, forms are des
 ## **Key Features**
 
 - **Voice-Enabled Form Filling**: Users can dictate their responses, which are then converted to text in real-time.
-- **Multilingual Support**: FormFlow supports over 80 languages, bridging communication gaps and making form filling more accessible.
+- **Multilingual Support**: FormFlow supports **80+ languages**, bridging communication gaps and making form filling more accessible.
 - **Seamless User Experience**: Intuitive design and fast form submission with real-time validation.
 - **Error-Free Form Filling**: Automatic corrections for common errors like spelling mistakes, especially for complex data like email addresses.
 - **Secure Data Handling**: All form data is securely submitted and stored in the database.
@@ -29,7 +29,7 @@ Filling out forms can be a tedious and time-consuming task. Often, forms are des
 
 ## **Supported Languages**
 
-FormFlow supports over 80 languages, including:
+FormFlow supports **80+ languages**, including:
 - **English (India, US, UK, Australia, Canada, New Zealand)**
 - **Hindi (India)**
 - **Spanish (Spain, Mexico, Colombia, Argentina, Chile)**
@@ -65,7 +65,7 @@ FormFlow supports over 80 languages, including:
 
 Here’s a video demonstration of how FormFlow works, showcasing the voice-driven form filling process:
 
-[Demo Video Link](assets/demo-video (Mohammed Javad A A))
+[Demo Video Link](assets/demo-video/demo-video%20(Mohammed%20Javad%20A%20A).mp4)
 
 ## **Deployment**
 
@@ -78,19 +78,21 @@ FormFlow is deployed live using Render. You can access the application here:
 This repository also contains additional assignments and documentation related to the FormFlow project:
 
 1. **Roadmap**: A detailed roadmap outlining the key milestones and progress of the project.
-   - **Location**: `/assignments/roadmap/Roadmap (Mohammed Javad A A)`
+   - **Location**: `/assignments/roadmap/Roadmap%20(Mohammed%20Javad%20A%20A).pdf`
 
 2. **PPT (PowerPoint Presentation)**: The project presentation summarizing the concept, features, and technical details of FormFlow.
-   - **Location**: `/assignments/ppt/FormFlow ppt (Mohammed Javad A A)`
+   - **Location**: `/assignments/ppt/FormFlow%20ppt%20(Mohammed%20Javad%20A%20A).pptx`
 
 3. **Agile Document**: Documentation of the Agile methodology followed during the project development.
-   - **Location**: `/assignments/agile/Agile_Template_v0.1(MOHAMMED_JAVAD_A_A)`
+   - **Location**: `/assignments/agile/Agile_Template_v0.1(MOHAMMED_JAVAD_A_A).xls`
 
 4. **Google Colab Link**: A link to the Google Colab notebook used for experiments or data-related tasks.
    - **Location**: [Google Colab Link](https://colab.research.google.com/drive/1Z-u_jp7I8TsPYqwkfRlI2zsnR6JxVbWz?usp=sharing)
 
 5. **Certifications**: Copies of certifications relevant to the project or technologies used.
-   - **Location**: `/assignments/certifications/sql_basic certificate (Mohammed Javad A A), python_basic certificate (Mohammed Javad A A)`
+   - **Location**: 
+     - `/assignments/certifications/python_basic%20certificate%20(Mohammed%20Javad%20A%20A).pdf`
+     - `/assignments/certifications/sql_basic%20certificate%20(Mohammed%20Javad%20A%20A).pdf`
 
 ## **License**
 
