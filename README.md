@@ -92,6 +92,9 @@ This repository also contains additional assignments and documentation related t
 5. **Certifications**: Copies of certifications relevant to the project or technologies used:  
    - [Python Certification](assignments/certifications/python_basic%20certificate%20(Mohammed%20Javad%20A%20A).pdf)  
    - [SQL Certification](assignments/certifications/sql_basic%20certificate%20(Mohammed%20Javad%20A%20A).pdf)
+     
+6. **Google Drive Link**: All assignments and documents related to the internship are available in this Google Drive folder:  
+   [View Assignments and Documents](https://drive.google.com/drive/folders/1bXgNaArLhzFXO7xKns_OEAdDLO9FwYn8?usp=drive_link)
 
 ## **License**
 
