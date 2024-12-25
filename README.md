@@ -81,7 +81,7 @@ This repository also contains additional assignments and documentation related t
    - **Location**: `/assignments/roadmap/Roadmap%20(Mohammed%20Javad%20A%20A).pdf`
 
 2. **PPT (PowerPoint Presentation)**: The project presentation summarizing the concept, features, and technical details of FormFlow.
-   - **Location**: `/assignments/ppt/FormFlow%20ppt%20(Mohammed%20Javad%20A%20A).pptx`
+   - **Location**: [Google Slides Link](https://docs.google.com/presentation/d/1dv_RSULOO6UqsYfnX29M0BksRHw3cqdX/edit?usp=drive_link&ouid=106563736108223114761&rtpof=true&sd=true)
 
 3. **Agile Document**: Documentation of the Agile methodology followed during the project development.
    - **Location**: `/assignments/agile/Agile_Template_v0.1(MOHAMMED_JAVAD_A_A).xls`
@@ -103,11 +103,7 @@ MIT License
 Copyright (c) 2024 Infosys
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
