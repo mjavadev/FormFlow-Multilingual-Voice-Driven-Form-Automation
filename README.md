@@ -19,6 +19,16 @@ Filling out forms can be a tedious and time-consuming task. Often, forms are des
 - **Error-Free Form Filling**: Automatic corrections for common errors like spelling mistakes, especially for complex data like email addresses.
 - **Secure Data Handling**: All form data is securely submitted and stored in the database.
 
+## **Additional Features**
+
+- **Multilingual Support**: Integrated **80+ languages** to ensure accessibility for a diverse user base, making the application globally inclusive.  
+- **Database Integration**: Incorporated **MySQL** for secure and efficient data storage and retrieval.  
+- **Form Confirmation Page**: Designed a page for users to review and validate their data before final submission, enhancing user confidence.  
+- **Real-Time Validation**: Added live data validation to minimize errors during the form entry process.  
+- **User Authentication**: Implemented secure login and signup functionality for personalized access and data privacy.  
+- **Deployment**: Successfully deployed the project on **Render**, ensuring global accessibility and usability.  
+- **AI-Driven Demo Video**: Created a detailed demonstration video with **AI voice narration** to showcase project features and functionality.  
+
 ## **Technologies Used**
 
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap
