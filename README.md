@@ -9,7 +9,7 @@ FormFlow is an innovative web application that transforms the traditional form-f
 Filling out forms can be a tedious and time-consuming task. Often, forms are designed to be text-heavy, and users have to enter data manually, which can result in errors and delays. Moreover, language barriers can prevent users from effectively completing forms in languages they are not familiar with. FormFlow solves these problems by:
 - Enabling voice-based form filling.
 - Supporting multiple languages to cater to a diverse audience.
-- Automating text entry, reducing human error.
+- Automating text entry, reducing human error and saving time.
 
 ## **Key Features**
 
@@ -79,9 +79,9 @@ Watch the video demonstration to see FormFlow in action:
 
 ## **Deployment**
 
-FormFlow is deployed live using Render. You can access the application here:
+Access the live deployment of FormFlow here:
 
-[FormFlow - Live Deployment](https://beyond-qwerty-form-filling.onrender.com)
+[FormFlow - Live Application](https://beyond-qwerty-form-filling.onrender.com)
 
 ## **Assignments**
 
