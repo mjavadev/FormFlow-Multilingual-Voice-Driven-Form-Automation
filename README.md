@@ -73,9 +73,9 @@ FormFlow supports **80+ languages**, including:
 
 ## **Demo**
 
-Here’s a video demonstration of how FormFlow works, showcasing the voice-driven form filling process:
-
-[Demo Video Link](demo%20video/demo-video%20(Mohammed%20Javad%20A%20A).mp4)
+Watch the video demonstration to see FormFlow in action:
+- [Watch on YouTube](https://youtu.be/J1JTEoQBksc)
+- [Download from GitHub](demo%20video/demo-video%20(Mohammed%20Javad%20A%20A).mp4)
 
 ## **Deployment**
 
@@ -108,4 +108,4 @@ This repository also contains additional assignments and documentation related t
 
 ## **License**
 
-This project is licensed under the [MIT License](LICENSE). 
+This project is licensed under the [MIT License](LICENSE).
