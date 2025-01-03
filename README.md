@@ -91,7 +91,7 @@ This repository also contains additional assignments and documentation related t
    [View Roadmap](assignments/Roadmap%20(Mohammed%20Javad%20A%20A).pdf)
 
 2. **PPT (PowerPoint Presentation)**: The project presentation summarizing the concept, features, and technical details of FormFlow.  
-   [View Presentation](https://docs.google.com/presentation/d/1dv_RSULOO6UqsYfnX29M0BksRHw3cqdX/edit?usp=drive_link&ouid=106563736108223114761&rtpof=true&sd=true)
+   [View Presentation](https://1drv.ms/p/c/0a077c2b308e3e62/EUs0kVUzOaJMssPiLPMtGCMBQDCmYHUR81b2cM8XY44vzA)
 
 3. **Agile Document**: Documentation of the Agile methodology followed during the project development.  
    [View Agile Document](assignments/Agile_Template_v0.1(MOHAMMED_JAVAD_A_A).xls)
