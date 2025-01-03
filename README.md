@@ -57,19 +57,19 @@ FormFlow supports **80+ languages**, including:
 
 ## **How It Works**
 
-1. **User Signup and Login**: Users create an account and securely log in to the system.
-2. **Select Language**: The user selects their preferred language from the available options.
-3. **Voice Input**: The user dictates their responses, which are instantly converted to text.
-4. **Form Validation**: The entered data is validated, ensuring accuracy and completeness.
-5. **Form Submission**: After reviewing the data, the user submits the form with a click, which is then securely stored.
+1. **User Signup and Login**: Users start by creating an account and securely logging into the system, ensuring personalized access.
+2. **Select Language**: The user selects their preferred language from a diverse list of 80+ options, ensuring inclusivity.
+3. **Voice Input**: The user dictates their responses, which are instantly transcribed into text fields using advanced voice recognition technology.
+4. **Form Validation**: Real-time validation ensures the entered data is accurate and complete, minimizing errors.
+5. **Form Submission**: Once the form is complete, the user submits it with a single click. After submission, the system displays a confirmation page with the entered details for review, ensuring transparency and confidence. The information is then securely stored in the backend database.
 
 ## **App Walkthrough**
 
-1. **Signup Page**: Users can quickly create an account by providing their name, email, and password.
-2. **Login Page**: Simple and secure login for registered users.
-3. **Form Page**: The user fills out the form using voice input, with real-time text conversion and validation.
-4. **Confirmation Page**: After submission, users receive a success message.
-5. **Database**: Data is securely stored in the backend database for easy retrieval and management.
+1. **Signup Page**: Users quickly create an account by entering their name, email, and password, with secure hashing for credentials.
+2. **Login Page**: A simple and secure login process for registered users ensures ease of access.
+3. **Form Page**: Users fill out the form using voice input, with real-time text conversion, multilingual support, and error validation to enhance accuracy.
+4. **Confirmation Page**: After submission, users are presented with their entered data for review, ensuring transparency and confidence.
+5. **Database**: All form submissions are securely stored in the backend database, ensuring tamper-proof storage and easy retrieval for future use.
 
 ## **Demo**
 
